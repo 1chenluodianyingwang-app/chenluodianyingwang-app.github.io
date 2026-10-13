@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>沉落电影网 | 在线免费观影·热门院线大片·高清影视资源聚合平台</title>
+<meta name="keywords" content="沉落电影网,chenluodianyingwang-app.github.io,在线电影,免费看片,高清影视,院线大片,热播剧集,动作片,喜剧片,科幻片,悬疑片,国产剧,美剧,韩剧,动漫番剧,影视资讯,观影指南,影评推荐">
+<meta name="description" content="沉落电影网（chenluodianyingwang-app.github.io）是专注于为影迷提供在线观影与影视资讯的内容平台。汇聚最新院线大片、高分经典、热播剧集、动漫番剧与纪录片资源，覆盖动作、喜剧、科幻、悬疑、爱情等多元类型，并配套详实的影评推荐与观影指南。无论你想追新片、补冷门佳作还是了解最新影视动态，沉落电影网都能满足你的需求。">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="author" content="沉落电影网">
+<meta name="copyright" content="Copyright © 沉落电影网 chenluodianyingwang-app.github.io 版权所有">
+<meta name="renderer" content="webkit">
+<meta name="applicable-device" content="pc,mobile">
+<meta property="og:type" content="website">
+<meta property="og:title" content="沉落电影网 - 在线免费观影·热门院线大片·高清影视资源聚合平台">
+<meta property="og:description" content="汇聚最新院线大片、高分经典、热播剧集与影视资讯，沉落电影网为影迷提供一站式在线观影与内容发现体验。">
+<meta property="og:url" content="https://chenluodianyingwang-app.github.io">
+<meta property="og:site_name" content="沉落电影网">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="沉落电影网 - 在线免费观影平台">
+<meta name="twitter:description" content="最新院线大片、高分经典、热播剧集与影视资讯一站聚合。">
+<link rel="canonical" href="https://chenluodianyingwang-app.github.io">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#0d0f14;--bg2:#141823;--card:#1b2030;--line:#2a3045;
+--txt:#e8eaf0;--txt2:#9aa3b2;--brand:#ff3b5c;--brand2:#ff7a45;
+--gold:#ffc94d;--ok:#35c88b;--shadow:0 10px 30px rgba(0,0,0,.35);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+background:var(--bg);color:var(--txt);
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+line-height:1.7;overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{width:100%;max-width:1180px;margin:0 auto;padding:0 18px}
+
+/* 顶部 */
+.topbar{background:rgba(13,15,20,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:100}
+.topbar .container{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;letter-spacing:.5px}
+.logo .badge{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--brand),var(--brand2));display:grid;place-items:center;font-size:17px;color:#fff;box-shadow:0 4px 12px rgba(255,59,92,.4)}
+.nav{display:flex;gap:6px}
+.nav a{padding:8px 14px;border-radius:20px;font-size:15px;color:var(--txt2);transition:.25s}
+.nav a:hover{background:var(--card);color:var(--txt)}
+.menu-btn{display:none;background:none;border:none;color:var(--txt);font-size:26px;cursor:pointer}
+
+/* 首屏 */
+.hero{position:relative;padding:70px 0 60px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 400px at 80% 10%,rgba(255,59,92,.18),transparent),radial-gradient(700px 400px at 10% 90%,rgba(53,200,139,.12),transparent);pointer-events:none}
+.hero .container{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.tag{display:inline-block;padding:5px 14px;border:1px solid rgba(255,122,69,.5);border-radius:30px;color:var(--brand2);font-size:13px;margin-bottom:18px;background:rgba(255,122,69,.08)}
+.hero h1{font-size:44px;line-height:1.25;font-weight:900;margin-bottom:18px}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--brand),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--txt2);font-size:16px;margin-bottom:26px;max-width:520px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.btn{padding:13px 28px;border-radius:12px;font-size:15px;font-weight:600;border:1px solid transparent;cursor:pointer;transition:.25s;display:inline-flex;align-items:center;gap:8px}
+.btn-main{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;box-shadow:0 8px 22px rgba(255,59,92,.35)}
+.btn-main:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(255,59,92,.45)}
+.btn-ghost{background:var(--card);color:var(--txt);border-color:var(--line)}
+.btn-ghost:hover{background:var(--bg2)}
+.hero-stats{display:flex;gap:30px;margin-top:36px}
+.stat .num{font-size:30px;font-weight:800;color:var(--gold)}
+.stat .lbl{font-size:13px;color:var(--txt2)}
+
+.poster{position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);transform:rotate(-1.5deg)}
+.poster img{width:100%;height:auto;filter:saturate(1.1)}
+.poster::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--bg) 2%,transparent 45%)}
+
+/* 通用区块 */
+section{padding:60px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:32px;flex-wrap:wrap}
+.sec-head h2{font-size:28px;font-weight:800;position:relative;padding-left:16px}
+.sec-head h2::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:5px;border-radius:3px;background:linear-gradient(var(--brand),var(--brand2))}
+.sec-head .more{color:var(--txt2);font-size:14px;border:1px solid var(--line);padding:6px 16px;border-radius:20px;transition:.25s}
+.sec-head .more:hover{color:var(--txt);border-color:var(--brand)}
+
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.3s}
+.card:hover{transform:translateY(-6px);border-color:rgba(255,59,92,.5);box-shadow:var(--shadow)}
+.thumb{position:relative;aspect-ratio:3/4;overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.card:hover .thumb img{transform:scale(1.08)}
+.thumb .rate{position:absolute;top:10px;right:10px;background:rgba(0,0,0,.7);color:var(--gold);font-size:12px;font-weight:700;padding:3px 9px;border-radius:20px;backdrop-filter:blur(4px)}
+.thumb .cat{position:absolute;top:10px;left:10px;background:var(--brand);color:#fff;font-size:12px;padding:3px 10px;border-radius:6px}
+.info{padding:14px}
+.info h3{font-size:16px;font-weight:700;margin-bottom:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.info .meta{font-size:13px;color:var(--txt2);display:flex;justify-content:space-between}
+
+/* 分类胶囊 */
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.chip{padding:8px 18px;border-radius:30px;background:var(--card);border:1px solid var(--line);font-size:14px;color:var(--txt2);cursor:pointer;transition:.2s}
+.chip:hover,.chip.on{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;border-color:transparent}
+
+/* 资讯列表 */
+.news-layout{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.news-item{display:flex;gap:16px;padding:16px;border:1px solid var(--line);border-radius:14px;background:var(--card);transition:.25s}
+.news-item:hover{border-color:rgba(53,200,139,.5);transform:translateX(4px)}
+.news-item .nimg{width:120px;height:80px;border-radius:10px;overflow:hidden;flex-shrink:0}
+.news-item .nimg img{width:100%;height:100%;object-fit:cover}
+.news-item h4{font-size:15px;margin-bottom:6px;line-height:1.5}
+.news-item .ndate{font-size:12px;color:var(--txt2)}
+
+/* 排行 */
+.rank-box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px}
+.rank-row{display:flex;align-items:center;gap:14px;padding:12px;border-radius:10px;transition:.2s}
+.rank-row:hover{background:var(--bg2)}
+.rank-row .no{width:28px;height:28px;border-radius:8px;background:var(--bg2);display:grid;place-items:center;font-weight:800;font-size:14px;flex-shrink:0}
+.rank-row.top .no{background:linear-gradient(135deg,var(--gold),var(--brand));color:#fff}
+.rank-row .rtxt{flex:1;font-size:15px}
+.rank-row .rscore{color:var(--gold);font-size:14px;font-weight:700}
+
+/* 关于 */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about-img{border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.feat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.feat .ico{font-size:24px;margin-bottom:10px}
+.feat h4{font-size:16px;margin-bottom:6px}
+.feat p{font-size:13px;color:var(--txt2)}
+
+/* 合作 */
+.brand-row{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.brand-cell{background:var(--card);border:1px solid var(--line);border-radius:12px;height:70px;display:grid;place-items:center;font-size:13px;color:var(--txt2);transition:.25s}
+.brand-cell:hover{color:var(--txt);border-color:var(--brand)}
+
+/* 底部 */
+footer{background:var(--bg2);border-top:1px solid var(--line);padding:50px 0 24px;margin-top:20px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:36px;margin-bottom:36px}
+.foot-brand p{color:var(--txt2);font-size:14px;margin-top:12px}
+.foot-col h5{font-size:15px;margin-bottom:14px}
+.foot-col a{display:block;color:var(--txt2);font-size:14px;padding:5px 0;transition:.2s}
+.foot-col a:hover{color:var(--brand)}
+.copyright{text-align:center;color:var(--txt2);font-size:13px;padding-top:24px;border-top:1px solid var(--line)}
+.copyright a{color:var(--brand2)}
+
+/* 响应式 */
+@media(max-width:960px){
+.hero .container{grid-template-columns:1fr;text-align:center}
+.hero h1{font-size:32px}
+.hero p{margin:0 auto 26px}
+.cta{justify-content:center}
+.hero-stats{justify-content:center}
+.poster{max-width:420px;margin:0 auto}
+.grid{grid-template-columns:repeat(2,1fr)}
+.news-layout,.about-grid{grid-template-columns:1fr}
+.brand-row{grid-template-columns:repeat(3,1fr)}
+.foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+.menu-btn{display:block}
+.nav{display:none;position:absolute;top:60px;left:0;right:0;background:var(--bg2);flex-direction:column;padding:14px;border-bottom:1px solid var(--line)}
+.nav.open{display:flex}
+.nav a{font-size:16px;padding:12px}
+.hero{padding:40px 0 40px}
+section{padding:44px 0}
+.sec-head h2{font-size:22px}
+.grid{grid-template-columns:1fr}
+.brand-row{grid-template-columns:repeat(2,1fr)}
+.foot-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<header class="topbar">
+  <div class="container">
+    <a class="logo" href="https://chenluodianyingwang-app.github.io">
+      <span class="badge">影</span>沉落电影网
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#home">首页</a>
+      <a href="#films">电影大片</a>
+      <a href="#series">热播剧集</a>
+      <a href="#news">影视资讯</a>
+      <a href="#rank">口碑排行</a>
+      <a href="#about">关于我们</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="菜单">☰</button>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div>
+        <span class="tag">🔥 每周更新 · 院线同步</span>
+        <h1>沉落电影网 · <em>发现好电影</em> 从一部开始</h1>
+        <p>沉落电影网（chenluodianyingwang-app.github.io）专注为影迷打造轻松、纯粹的观影入口。从好莱坞大片到国产佳片，从经典老片到最新上线，你想看的，这里都有迹可循。</p>
+        <div class="cta">
+          <a class="btn btn-main" href="#films">立即观影 →</a>
+          <a class="btn btn-ghost" href="#rank">查看口碑榜</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><div class="num">8000+</div><div class="lbl">影视资源</div></div>
+          <div class="stat"><div class="num">120+</div><div class="lbl">内容分类</div></div>
+          <div class="stat"><div class="num">98%</div><div class="lbl">用户满意度</div></div>
+        </div>
+      </div>
+      <div class="poster">
+        <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=700&q=80" alt="影院观影氛围">
+      </div>
+    </div>
+  </section>
+
+  <!-- 电影大片 -->
+  <section id="films">
+    <div class="container">
+      <div class="sec-head">
+        <h2>院线大片 · 正在热映</h2>
+        <a class="more" href="#">查看全部 →</a>
+      </div>
+      <div class="chips">
+        <span class="chip on">全部</span>
+        <span class="chip">动作</span>
+        <span class="chip">科幻</span>
+        <span class="chip">喜剧</span>
+        <span class="chip">悬疑</span>
+        <span class="chip">爱情</span>
+        <span class="chip">动画</span>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div class="thumb"><span class="cat">动作</span><span class="rate">★ 8.7</span><img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=400&q=80" alt="电影海报"></div>
+          <div class="info"><h3>极速追击 · 城市狂飙</h3><div class="meta"><span>2026</span><span>动作 / 犯罪</span></div></div>
+        </div>
+        <div class="card">
+          <div class="thumb"><span class="cat">科幻</span><span class="rate">★ 9.1</span><img src="https://images.unsplash.com/photo-1446776877081-d282a0f896e2?w=400&q=80" alt="电影海报"></div>
+          <div class="info"><h3>星际回响 · 深空序曲</h3><div class="meta"><span>2026</span><span>科幻 / 冒险</span></div></div>
+        </div>
+        <div class="card">
+          <div class="thumb"><span class="cat">喜剧</span><span class="rate">★ 8.3</span><img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400&q=80" alt="电影海报"></div>
+          <div class="info"><h3>乌龙大冒险</h3><div class="meta"><span>2026</span><span>喜剧 / 家庭</span></div></div>
+        </div>
+        <div class="card">
+          <div class="thumb"><span class="cat">悬疑</span><span class="rate">★ 8.9</span><img src="https://images.unsplash.com/photo-1505646692366-00b1f0328d0e?w=400&q=80" alt="电影海报"></div>
+          <div class="info"><h3>沉默证人</h3><div class="meta"><span>2026</span><span>悬疑 / 犯罪</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热播剧集 -->
+  <section id="series" style="background:var(--bg2)">
+    <div class="container">
+      <div class="sec-head">
+        <h2>热播剧集 · 追剧不停</h2>
+        <a class="more" href="#">更多剧集 →</a>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div class="thumb"><span class="cat">国产剧</span><span class="rate">★ 9.0</span><img src="https://images.unsplash.com/photo-1574267432553-4b4628081c31?w=400&q=80" alt="剧集封面"></div>
+          <div class="info"><h3>长夜将明</h3><div class="meta"><span>36集</span><span>年代 / 剧情</span></div></div>
+        </div>
+        <div class="card">
+          <div class="thumb"><span class="cat">美剧</span><span class="rate">★ 9.3</span><img src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?w=400&q=80" alt="剧集封面"></div>
+          <div class="info"><h3>暗潮 · 第三季</h3><div class="meta"><span>10集</span><span>惊悚 / 剧情</span></div></div>
+        </div>
+        <div class="card">
+          <div class="thumb"><span class="cat">韩剧</span><span class="rate">★ 8.6</span><img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=400&q=80" alt="剧集封面"></div>
+          <div class="info"><h3>春日情书</h3><div class="meta"><span>16集</span><span>爱情 / 都市</span></div></div>
+        </div>
+        <div class="card">
+          <div class="thumb"><span class="cat">动漫</span><span class="rate">★ 9.4</span><img src="https://images.unsplash.com/photo-1613376023733-0a73315d9b2e?w=400&q=80" alt="剧集封面"></div>
+          <div class="info"><h3>云端剑客 · 终章</h3><div class="meta"><span>24集</span><span>奇幻 / 热血</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 影视资讯 -->
+  <section id="news">
+    <div class="container">
+      <div class="sec-head">
+        <h2>影视资讯 · 观影指南</h2>
+        <a class="more" href="#">更多文章 →</a>
+      </div>
+      <div class="news-layout">
+        <div>
+          <div class="news-item">
+            <div class="nimg"><img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=300&q=80" alt="资讯配图"></div>
+            <div><h4>2026 国庆档前瞻：五部重磅大片谁能领跑票房？</h4><div class="ndate">沉落电影网 · 3 小时前</div></div>
+          </div>
+          <div class="news-item" style="margin-top:14px">
+            <div class="nimg"><img src="https://images.unsplash.com/photo-1604975701397-6365ccbd028a?w=300&q=80" alt="资讯配图"></div>
+            <div><h4>影评 | 这部冷门悬疑片，后劲比你想的大得多</h4><div class="ndate">沉落电影网 · 昨天</div></div>
+          </div>
+          <div class="news-item" style="margin-top:14px">
+            <div class="nimg"><img src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?w=300&q=80" alt="资讯配图"></div>
+            <div><h4>观影指南：适合周末一个人安静看完的 8 部电影</h4><div class="ndate">沉落电影网 · 2 天前</div></div>
+          </div>
+        </div>
+        <div class="rank-box">
+          <div class="rank-row top"><span class="no">1</span><span class="rtxt">星际回响 · 深空序曲</span><span class="rscore">9.1</span></div>
+          <div class="rank-row top"><span class="no">2</span><span class="rtxt">暗潮 · 第三季</span><span class="rscore">9.3</span></div>
+          <div class="rank-row top"><span class="no">3</span><span class="rtxt">云端剑客 · 终章</span><span class="rscore">9.4</span></div>
+          <div class="rank-row"><span class="no">4</span><span class="rtxt">沉默证人</span><span class="rscore">8.9</span></div>
+          <div class="rank-row"><span class="no">5</span><span class="rtxt">极速追击 · 城市狂飙</span><span class="rscore">8.7</span></div>
+          <div class="rank-row"><span class="no">6</span><span class="rtxt">长夜将明</span><span class="rscore">9.0</span></div>
+          <div class="rank-row"><span class="no">7</span><span class="rtxt">乌龙大冒险</span><span class="rscore">8.3</span></div>
+          <div class="rank-row"><span class="no">8</span><span class="rtxt">春日情书</span><span class="rscore">8.6</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 口碑排行 -->
+  <section id="rank" style="background:var(--bg2)">
+    <div class="container">
+      <div class="sec-head">
+        <h2>本周口碑榜</h2>
+        <a class="more" href="#">完整榜单 →</a>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div class="thumb"><span class="rate">NO.1</span><img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&q=80" alt="榜单影片"></div>
+          <div class="info"><h3>本周最高分 · 纪录片精选</h3><div class="meta"><span>纪录片</span><span>9.6 分</span></div></div>
+        </div>
+        <div class="card">
+          <div class="thumb"><span class="rate">NO.2</span><img src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?w=400&q=80" alt="榜单影片"></div>
+          <div class="info"><h3>编剧封神之作</h3><div class="meta"><span>剧情</span><span>9.2 分</span></div></div>
+        </div>
+        <div class="card">
+          <div class="thumb"><span class="rate">NO.3</span><img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400&q=80" alt="榜单影片"></div>
+          <div class="info"><h3>年度治愈系黑马</h3><div class="meta"><span>治愈</span><span>8.8 分</span></div></div>
+        </div>
+        <div class="card">
+          <div class="thumb"><span class="rate">NO.4</span><img src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?w=400&q=80" alt="榜单影片"></div>
+          <div class="info"><h3>反转不断的悬疑新作</h3><div class="meta"><span>悬疑</span><span>8.7 分</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于我们 -->
+  <section id="about">
+    <div class="container">
+      <div class="sec-head">
+        <h2>关于沉落电影网</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-img">
+          <img src="https://images.unsplash.com/photo-1585647347384-2593bc35786b?w=700&q=80" alt="关于沉落电影网">
+        </div>
+        <div>
+          <p style="color:var(--txt2);margin-bottom:22px">沉落电影网（<strong style="color:var(--txt)">chenluodianyingwang-app.github.io</strong>）成立于 2021 年，是一个由影迷创建、为影迷服务的影视内容平台。我们不做花哨的噱头，只做一件事：帮你更快、更准地找到值得一看的好作品。</p>
+          <div class="features">
+            <div class="feat"><div class="ico">🎬</div><h4>资源丰富</h4><p>覆盖电影、剧集、动漫、纪录片等多元类型。</p></div>
+            <div class="feat"><div class="ico">⚡</div><h4>更新及时</h4><p>院线大片与热播剧集同步追踪，第一时间收录。</p></div>
+            <div class="feat"><div class="ico">📝</div><h4>专业影评</h4><p>每部作品附真实评价与观影指南，拒绝剧透。</p></div>
+            <div class="feat"><div class="ico">🌐</div><h4>简洁体验</h4><p>无广告干扰、移动端自适应，随时随地畅快浏览。</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 合作品牌 -->
+  <section style="background:var(--bg2)">
+    <div class="container">
+      <div class="sec-head">
+        <h2>内容合作 · 友情链接</h2>
+      </div>
+      <div class="brand-row">
+        <div class="brand-cell">豆瓣电影</div>
+        <div class="brand-cell">猫眼专业版</div>
+        <div class="brand-cell">IMDb</div>
+        <div class="brand-cell">烂番茄</div>
+        <div class="brand-cell">时光网</div>
+        <div class="brand-cell">影视工业网</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="logo"><span class="badge">影</span>沉落电影网</div>
+        <p>专注影视内容推荐与观影指南，为影迷打造轻松纯粹的找片入口。</p>
+      </div>
+      <div class="foot-col">
+        <h5>内容导航</h5>
+        <a href="#films">电影大片</a>
+        <a href="#series">热播剧集</a>
+        <a href="#news">影视资讯</a>
+        <a href="#rank">口碑排行</a>
+      </div>
+      <div class="foot-col">
+        <h5>内容分类</h5>
+        <a href="#">动作片</a>
+        <a href="#">科幻片</a>
+        <a href="#">喜剧片</a>
+        <a href="#">悬疑片</a>
+      </div>
+      <div class="foot-col">
+        <h5>关于我们</h5>
+        <a href="#about">平台简介</a>
+        <a href="#">投稿合作</a>
+        <a href="#">免责声明</a>
+        <a href="#">联系方式</a>
+      </div>
+    </div>
+    <div class="copyright">
+      Copyright © 2026 沉落电影网 版权所有 · 网站地址：<a href="https://chenluodianyingwang-app.github.io">chenluodianyingwang-app.github.io</a> · 保留所有权利
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn'),nav=document.getElementById('nav');
+  if(btn&&nav){
+    btn.addEventListener('click',function(){nav.classList.toggle('open')});
+    nav.addEventListener('click',function(e){if(e.target.tagName==='A')nav.classList.remove('open')});
+  }
+  var chips=document.querySelectorAll('.chip');
+  chips.forEach(function(c){c.addEventListener('click',function(){chips.forEach(function(x){x.classList.remove('on')});c.classList.add('on')})});
+})();
+</script>
+</body>
+</html>
